@@ -1,0 +1,88 @@
+[11:47 PM, 2/28/2024] 𝓜𝓭 𝓥𝓪𝔃𝓪𝓱𝓪𝓽 𝓐𝓵𝓲: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Shahi Dawaat - Order Online</title>
+</head>
+<body>
+    <header>
+        <h1>Shahi Dawaat</h1>
+        <p>We serve the best in Hyderabad</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="menu">
+        <h2>Menu</h2>
+        
+        <div class="category">
+            <h3>Main Course</h3>
+            <ul>
+                <li>Biryani</li>
+                <li>Laccha Paratha</li>
+                <li>Chicken Mughali</li>
+                <li>Chicken 65</li>
+                <li>Sheek Kebab</li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h3>Desserts</h3>
+            <ul>
+                <li>Kaddu ki Kheer</li>
+                <li>Kashmiri Rabdi</li>
+                <li>Ice Cream</li>
+            </ul>
+        </div>
+
+        <div class="category">
+            <h3>Mocktail</h3>
+            <ul>
+                <li>7UP</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>To place an order, call us at: <a href="tel:+53782882">53782882</a></p>
+        <p>Or email us at: <a href="mailto:shahidastarhyd@gmail.com">shahidastarhyd@gmail.com</a></p>
+        <p>We charge for delivery.</p>
+    </section>
+
+    <footer>
+        <p>We serve the best in Hyderabad</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+[11:48 PM, 2/28/2024] 𝓜𝓭 𝓥𝓪𝔃𝓪𝓱𝓪𝓽 𝓐𝓵𝓲: <section id="order">
+        <h2>Place Your Order</h2>
+        <form id="orderForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" required></textarea>
+
+            <button type="button" onclick="submitOrder()">Submit Order</button>
+        </form>
+        <p id="confirmationMessage"></p>
+    </section>
+
+    <!-- ... (remaining HTML code) ... -->
+
+    <script src="script.js"></script>
+</body>
+</html>
