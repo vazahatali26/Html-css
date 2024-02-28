@@ -1,2 +1,2 @@
 # Html-css
-Code for semester tracking 
+Basic Code for semester syllabus  tracking 
