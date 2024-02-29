@@ -1,18 +1,22 @@
-function mindReader() {
-    // Get the selected number from the dropdown
-    const selectedNumber = parseInt(document.getElementById('selectedNumber').value);
+function playerChoice(choice) {
+    const computerChoices = ['rock', 'paper', 'scissors'];
+    const computerChoice = computerChoices[Math.floor(Math.random() * 3)];
 
-    // Get the user's input
-    const userInput = parseInt(document.getElementById('userInput').value);
+    const result = determineWinner(choice, computerChoice);
 
-    if (isNaN(userInput)) {
-        alert('Please enter a valid number for the second input.');
-        return;
+    document.getElementById('result').textContent = `You chose ${choice}. Computer chose ${computerChoice}. ${result}`;
+}
+
+function determineWinner(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        return "It's a tie!";
+    } else if (
+        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+        (playerChoice === 'paper' && computerChoice === 'rock') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper')
+    ) {
+        return 'You win!';
+    } else {
+        return 'Computer wins!';
     }
-
-    // Perform a mathematical operation
-    const result = selectedNumber + userInput * 2;
-
-    // Display the result to the user
-    document.getElementById('result').textContent = `You were thinking of the number ${result}!`;
 }
