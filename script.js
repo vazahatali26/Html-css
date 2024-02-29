@@ -1,22 +1,20 @@
-function playerChoice(choice) {
-    const computerChoices = ['rock', 'paper', 'scissors'];
-    const computerChoice = computerChoices[Math.floor(Math.random() * 3)];
+const audioPlayer = document.getElementById('audioPlayer');
+const fileInput = document.getElementById('fileInput');
 
-    const result = determineWinner(choice, computerChoice);
-
-    document.getElementById('result').textContent = `You chose ${choice}. Computer chose ${computerChoice}. ${result}`;
-}
-
-function determineWinner(playerChoice, computerChoice) {
-    if (playerChoice === computerChoice) {
-        return "It's a tie!";
-    } else if (
-        (playerChoice === 'rock' && computerChoice === 'scissors') ||
-        (playerChoice === 'paper' && computerChoice === 'rock') ||
-        (playerChoice === 'scissors' && computerChoice === 'paper')
-    ) {
-        return 'You win!';
+function playPause() {
+    if (audioPlayer.paused) {
+        audioPlayer.play();
     } else {
-        return 'Computer wins!';
+        audioPlayer.pause();
     }
 }
+
+fileInput.addEventListener('change', function () {
+    const file = fileInput.files[0];
+
+    if (file) {
+        const objectURL = URL.createObjectURL(file);
+        audioPlayer.src = objectURL;
+        audioPlayer.load();
+    }
+});
