@@ -3,96 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>7th Sem Important</title>
+    <title>Guess the Number</title>
 </head>
 <body>
-    <header class="bg-primary text-light text-center py-5">
-        <h1>7th Sem Important</h1>
-    </header>
-    <main class="container my-4">
-        <section class="subject-section" id="iot-section">
-            <h2 class="subject-title" onclick="toggleContent('iot-section')"><i class="fas fa-cogs"></i> IoT</h2>
-            <div class="subject-content">
-                <h3 class="question-category">SAQ’S:</h3>
-                <ul>
-                    <li>Impact and challenges of IOT</li>
-                    <li>List out class of Constraint Nodes.</li>
-                    <li>Illustrate about criteria for connecting smart objects</li>
-                    <li>High level zigbee protocol stack.</li>
-                    <li>Define SCADA</li>
-                    <li>What is XIVELY cloud for IoT</li>
-                    <li>Write about cloud storage models.</li>
-                    <li>Characteristics of IoT</li>
-                    <li>Sensors of smart phone</li>
-                    <li>Factors of IP Adaptation & Adoption model</li>
-                    <li>How sensors & Actuators interact with the physical world</li>
-                    <li>SCADA protocol translation</li>
-                    <li>COAP message format</li>
-                    <li>WAMP protocol 5</li>
-                </ul>
-                <h3 class="question-category">LAQ’S:</h3>
-                <ul>
-                    <li>(a) Describe about IoT world forum Standard Architecture.</li>
-                    <li>(b) Explain about characteristics of IoT.</li>
-                    <li>(a) Topologies used for connecting IoT devices.</li>
-                    <li>(b) Draw the IEEE 802.15.4 MAC format</li>
-                    <li>(a) Draw neat diagram for each 6 LOWPAN header stack</li>
-                    <li>(b) Write about IPSO Alliances.</li>
-                    <li>(a) Explain IoT data broker understands the different format in which temperature is encoded & is therefore able to decode</li>
-                    <li>(b) Compare COMP & MQTT protocol</li>
-                    <li>(a) Explain about MQTT QoS flows</li>
-                    <li>(b) Describe how Protocol Stack is used for transporting Serial DNP3 SCADA over IP.</li>
-                    <li>(a) What are the steps involved in IoT system design methodology</li>
-                    <li>(b) Explain clearly about the block diagram of IoT devices.</li>
-                    <li>(a) Explain about M2M IoT architecture</li>
-                    <li>(b) Explain about Simplified IoT Architecture</li>
-                    <li>(a) Illustrate the characteristics of smart objects</li>
-                    <li>(b) Design constraints for wireless smart objects</li>
-                    <li>(a) Draw IoT Application layer protocol</li>
-                    <li>(b) Explain COAP communication in IoT infrastructure.</li>
-                    <li>(a) Explain MQTT publish, subscribe framework and MQTT message format</li>
-                    <li>(b) Explain the Protocol Stack for Transporting Serial DNP3 SCADA over IP</li>
-                    <li>(a) Elaborate WAMP architecture for IoT</li>
-                    <li>(b) Explain in detail about Raspberry Pi interface</li>
-                    <li>(a) Explain about Amazon web services for IoT</li>
-                    <li>(b) Explain about Django architecture framework.</li>
-                </ul>
-            </div>
-        </section>
+    <div class="container">
+        <h1>Guess the Number Game</h1>
+        <p>Guess a number between 1 and 10:</p>
+        <input type="number" id="guessInput" min="1" max="10">
+        <button onclick="checkGuess()">Submit Guess</button>
+        <p id="message"></p>
+    </div>
 
-        <section class="subject-section" id="bda-section">
-            <h2 class="subject-title" onclick="toggleContent('bda-section')"><i class="fas fa-database"></i> BDA</h2>
-            <div class="subject-content">
-                <!-- BDA questions content -->
-            </div>
-        </section>
-
-        <section class="subject-section" id="cyber-security-section">
-            <h2 class="subject-title" onclick="toggleContent('cyber-security-section')"><i class="fas fa-shield-alt"></i> Cyber Security</h2>
-            <div class="subject-content">
-                <!-- Cyber Security questions content -->
-            </div>
-        </section>
-
-        <section class="subject-section" id="spm-section">
-            <h2 class="subject-title" onclick="toggleContent('spm-section')"><i class="fas fa-cogs"></i> SPM</h2>
-            <div class="subject-content">
-                <!-- SPM questions content -->
-            </div>
-        </section>
-
-        <!-- Add more sections for other subjects -->
-
-    </main>
-    <footer class="bg-primary text-light text-center py-3 fixed-bottom">
-        <p>&copy; 2024 Your Name</p>
-    </footer>
     <script src="script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
