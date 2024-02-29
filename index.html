@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Rock, Paper, Scissors Game</title>
+    <title>MP3 Player</title>
 </head>
 <body>
     <div class="container">
-        <h1>Rock, Paper, Scissors Game</h1>
-        <div id="choices">
-            <button onclick="playerChoice('rock')">Rock</button>
-            <button onclick="playerChoice('paper')">Paper</button>
-            <button onclick="playerChoice('scissors')">Scissors</button>
-        </div>
-        <p id="result"></p>
+        <h1>MP3 Player</h1>
+        <input type="file" id="fileInput" accept=".mp3" />
+        <button onclick="playPause()">Play / Pause</button>
+        <audio id="audioPlayer" controls></audio>
     </div>
 
     <script src="js/script.js"></script>
