@@ -1,17 +1,18 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Sample subjects
-    const subjects = ['Mathematics', 'Physics', 'Computer Science'];
+    const subjects = [
+        { name: 'Mathematics', questions: ['Question 1', 'Question 2'] },
+        { name: 'Physics', questions: ['Question 3', 'Question 4'] },
+        { name: 'Computer Science', questions: ['Question 5', 'Question 6'] }
+    ];
 
-    // Function to render subjects on the webpage
     function renderSubjects() {
         const subjectList = document.getElementById('subjectList');
         subjectList.innerHTML = '';
 
         subjects.forEach(subject => {
             const li = document.createElement('li');
-            li.textContent = subject;
+            li.textContent = subject.name;
 
-            // Click event to show important questions
             li.addEventListener('click', function () {
                 showQuestions(subject);
             });
@@ -20,15 +21,23 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Function to show important questions for a subject
     function showQuestions(subject) {
-        const isConfirmed = confirm(`Do you want to view and delete important questions for ${subject}?`);
+        const isConfirmed = confirm(`Do you want to view and delete important questions for ${subject.name}?`);
         if (isConfirmed) {
-            // Add your logic to show and delete questions for the selected subject
-            alert(`Logic for ${subject} questions will be implemented here.`);
+            const questionsString = subject.questions.join('\n');
+            const userInput = prompt(`Important Questions for ${subject.name}:\n${questionsString}\nEnter question number to delete:`);
+
+            if (userInput !== null) {
+                const questionIndex = parseInt(userInput) - 1;
+                if (!isNaN(questionIndex) && questionIndex >= 0 && questionIndex < subject.questions.length) {
+                    subject.questions.splice(questionIndex, 1);
+                    alert(`Question deleted successfully!`);
+                } else {
+                    alert(`Invalid input or question number. No questions were deleted.`);
+                }
+            }
         }
     }
 
-    // Initial rendering of subjects
     renderSubjects();
 });
