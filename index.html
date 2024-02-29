@@ -1,20 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>My Semester Subjects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semester Subjects</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="container">
-    <h1>My Semester Subjects</h1>
-    <ul id="subjectList">
-        <!-- Subjects will be added dynamically here using JavaScript -->
-    </ul>
-</div>
+  <header>
+    <h1>Semester Subjects</h1>
+  </header>
 
-<script src="/script.js"></script>
+  <nav>
+    <ul>
+      <li onclick="showQuestions('bda')">BDA</li>
+      <li onclick="showQuestions('iot')">IOT</li>
+      <li onclick="showQuestions('spm')">SPM</li>
+      <li onclick="showQuestions('cyber')">Cyber Security</li>
+    </ul>
+  </nav>
+
+  <section id="questions-container">
+    <!-- Questions will be displayed here based on user selection -->
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Semester Subjects Website</p>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
