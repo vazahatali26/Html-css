@@ -28,7 +28,7 @@ function getQuestions(subject) {
         "Challenges of big data",
         "Big data analytics and classification",
         "Big data technologies",
-        "     . Hadoop architecture
+        "Hadoop architecture", 
 "Explain how data is analyzed with Hadoop Using Map and Reduce", 
 "Explain Hadoop Ecosystem.", 
 "Explain how Data is read using the Java FileSystem API.", 
