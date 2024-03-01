@@ -1,48 +1,32 @@
-const chatContainer = document.getElementById('chat-container');
-const chatBox = document.getElementById('chat-box');
-const userInput = document.getElementById('user-input');
+document.addEventListener('DOMContentLoaded', function () {
+    const watchesData = [
+        { name: 'Watch A', price: 350, image: 'watch_a.jpg' },
+        { name: 'Watch B', price: 650, image: 'watch_b.jpg' },
+        { name: 'Watch C', price: 1000, image: 'watch_c.jpg' }
+        // Add more watches as needed
+    ];
 
-async function sendMessage() {
-    const userMessage = userInput.value;
-    if (userMessage.trim() === '') return;
+    const watchContainer = document.getElementById('watchContainer');
 
-    // Display user message in the chat box
-    displayMessage('user', userMessage);
+    watchesData.forEach(watch => {
+        const card = document.createElement('div');
+        card.classList.add('card');
 
-    // Fetch response from the Chatbot API
-    const botMessage = await getChatbotResponse(userMessage);
+        const image = document.createElement('img');
+        image.src = watch.image;
+        image.alt = watch.name;
 
-    // Display chatbot message in the chat box after a short delay
-    setTimeout(() => {
-        displayMessage('bot', botMessage);
-    }, 500);
+        const title = document.createElement('h2');
+        title.textContent = watch.name;
 
-    // Clear the user input field
-    userInput.value = '';
-}
+        const price = document.createElement('p');
+        price.classList.add('card-price');
+        price.textContent = `$${watch.price}`;
 
-function displayMessage(sender, message) {
-    chatBox.innerHTML += `<div class="${sender}-message">${message}</div>`;
-    // Scroll to the bottom of the chat box to show the latest message
-    chatContainer.scrollTop = chatContainer.scrollHeight;
-}
+        card.appendChild(image);
+        card.appendChild(title);
+        card.appendChild(price);
 
-async function getChatbotResponse(userMessage) {
-    const apiKey = 'YOUR_OPENAI_API_KEY';
-    const apiUrl = 'https://api.openai.com/v1/engines/davinci-codex/completions';
-
-    const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${apiKey}`
-        },
-        body: JSON.stringify({
-            prompt: userMessage,
-            max_tokens: 150
-        })
+        watchContainer.appendChild(card);
     });
-
-    const data = await response.json();
-    return data.choices[0].text.trim();
-}
+});
