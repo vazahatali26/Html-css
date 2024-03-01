@@ -71,3 +71,22 @@ footer {
     bottom: 0;
     width: 100%;
 }
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Clock_at_Charminar.jpg/1600px-Clock_at_Charminar.jpg '); /* Replace 'background.jpg' with the actual filename of your background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* This will make the background fixed while scrolling */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Use rgba for a semi-transparent background */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Rest of your existing styles... */
