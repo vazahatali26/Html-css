@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const watchesData = [
-        { name: 'Watch A', price: 350, image: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUfnZ_BQ08MiHPUgZwl9ZkiO1ZOrvRuxcnIA&usqp=CAU ' },
+        { name: 'Watch A', price: 350, image: ' https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2 ' },
         { name: 'Watch B', price: 650, image: 'watch_b.jpg' },
         { name: 'Watch C', price: 1000, image: 'watch_c.jpg' }
         // Add more watches as needed
