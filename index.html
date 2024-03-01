@@ -1,34 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semester Subjects</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chatbot</title>
 </head>
 <body>
-
-  <header>
-    <h1>Semester Subjects</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li onclick="showQuestions('bda')">BDA</li>
-      <li onclick="showQuestions('iot')">IOT</li>
-      <li onclick="showQuestions('spm')">SPM</li>
-      <li onclick="showQuestions('cyber')">Cyber Security</li>
-    </ul>
-  </nav>
-
-  <section id="questions-container">
-    <!-- Questions will be displayed here based on user selection -->
-  </section>
-
-  <footer>
-    <p>&copy; 2024 Semester Subjects Website</p>
-  </footer>
-
-  <script src="/script.js"></script>
+    <div class="chat-container" id="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
