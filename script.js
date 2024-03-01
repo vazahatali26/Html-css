@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const price = document.createElement('p');
         price.classList.add('card-price');
-        price.textContent = `RS{watch.price}`;
+        price.textContent = `$${watch.price}`;
 
         card.appendChild(image);
         card.appendChild(title);
